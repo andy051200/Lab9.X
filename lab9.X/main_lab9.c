@@ -57,7 +57,6 @@ unsigned char nums_displays[] =
 };
 unsigned int a,b,c ; //a para centenas, b para decenas, c para unidades
 unsigned int contador = 0; // varible para incrementar
-//unsigned int muxeo = 0; //variable que lleva cuenta de la multiplexada
 
 /*-----------------------------------------------------------------------------
 -------------------------prototipos de funciones-------------------------------
