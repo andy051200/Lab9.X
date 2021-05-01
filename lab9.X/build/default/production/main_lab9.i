@@ -2508,62 +2508,45 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
 # 32 "main_lab9.c" 2
-# 48 "main_lab9.c"
+# 46 "main_lab9.c"
 void setup(void);
-
-
 void __attribute__((picinterrupt(("")))) isr(void)
 {
 
 
     if (PIR1bits.ADIF==1)
     {
-        if (ADCON0bits.CHS==0)
+
+        if (ADCON0bits.CHS == 0)
         {
-
-            CCPR1L = ADRESH;
-            PIR1bits.ADIF=0;
+            CCPR1L = (ADRESH>>1)+124;
+            CCP1CONbits.DC1B1 = ADRESH & 0b01;
+            CCP1CONbits.DC1B0 = (ADRESL>>7);
+            ADCON0bits.CHS = 1;
         }
+
         else
-
-
-            PORTDbits.RD0=1;
-
-            PIR1bits.ADIF=0;
-
+        {
+            CCPR2L = (ADRESH>>1)+124;
+            CCP2CONbits.DC2B1 = ADRESH & 0b01;
+            CCP2CONbits.DC2B0 = (ADRESL>>7);
+            ADCON0bits.CHS = 0;
+        }
+        _delay((unsigned long)((50)*(8000000/4000000.0)));
+        PIR1bits.ADIF = 0;
+        ADCON0bits.GO = 1;
     }
 }
-
-
 
 
 
 void main(void)
 {
     setup();
+    ADCON0bits.GO=1;
 
-
-    while(1)
-    {
-        if (ADCON0bits.GO ==0)
-        {
-            if (ADCON0bits.CHS==0)
-            {
-                ADCON0bits.CHS=1;
-                _delay((unsigned long)((100)*(8000000/4000000.0)));
-                ADCON0bits.GO = 1;
-            }
-            else
-            {
-                ADCON0bits.CHS=0;
-                _delay((unsigned long)((100)*(8000000/4000000.0)));
-                ADCON0bits.GO = 1;
-            }
-        }
-
-    }
+    while(1){}
 }
-
 
 
 
@@ -2571,14 +2554,12 @@ void setup(void)
 {
 
     ANSEL = 0b00000011;
-    ANSELH = 0;
 
 
-    TRISA = 0xFF;
+    TRISA = 0b00000011;
     TRISC= 0;
-    TRISD= 0;
+    PORTA=0;
     PORTC=0;
-    PORTD=0;
 
 
     OSCCONbits.IRCF2=1;
@@ -2590,34 +2571,24 @@ void setup(void)
     ADCON1bits.ADFM = 0 ;
     ADCON1bits.VCFG0 = 0 ;
     ADCON1bits.VCFG1 = 0 ;
-
-    ADCON0bits.ADCS = 0b10 ;
+    ADCON0bits.ADCS = 2 ;
     ADCON0bits.CHS = 0;
     ADCON0bits.ADON = 1 ;
     _delay((unsigned long)((50)*(8000000/4000000.0)));
 
 
-
-
-
-    TRISCbits.TRISC2=1;
-    TRISDbits.TRISD5=1;
     PR2 = 249;
 
-
-    CCP1CONbits.P1M = 0b0;
+    TRISCbits.TRISC2=1;
+    CCP1CONbits.P1M = 0;
     CCP1CONbits.CCP1M = 0b1100;
     CCPR1L = 0x0f ;
     CCP1CONbits.DC1B = 0;
 
-
-    CCP2CON = 0x0C;
-
-
-    CCPR2L = 100 ;
-
-
-
+    TRISCbits.TRISC1 = 1;
+    CCP2CONbits.CCP2M = 0b1100;
+    CCPR2L = 0x0f;
+    CCP2CONbits.DC2B1 = 0;
 
 
     PIR1bits.TMR2IF = 0;
@@ -2627,18 +2598,14 @@ void setup(void)
     while(PIR1bits.TMR2IF==0);
     PIR1bits.TMR2IF=0;
     TRISCbits.TRISC2 = 0;
-    TRISDbits.TRISD5= 0;
+    TRISCbits.TRISC1= 0;
+
+
 
     INTCONbits.GIE=1;
     INTCONbits.PEIE=1 ;
-    INTCONbits.T0IE=1;
-    INTCONbits.TMR0IF=0;
-    INTCONbits.TMR0IE=1;
-    INTCONbits.RBIF=0;
-
 
     PIE1bits.ADIE = 1 ;
     PIR1bits.ADIF = 0;
-
     return;
 }

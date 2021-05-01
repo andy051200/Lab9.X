@@ -13,13 +13,13 @@
 %PSECTS
 $dist/default/production\lab9.X.production.o
 cinit CODE 0 F F 4 2
-text1 CODE 0 13 13 53 2
-text2 CODE 0 95 95 1C 2
-maintext CODE 0 66 66 2F 2
+text1 CODE 0 80 80 54 2
+text2 CODE 0 13 13 6D 2
+maintext CODE 0 D4 D4 C 2
 cstackCOMMON COMMON 1 70 70 5 1
 intentry CODE 0 4 4 8 2
 config CONFIG 4 2007 2007 2 2
-$C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
+$C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -38,13 +38,13 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST B1-1FFF 2
+CONST E0-1FFF 2
 ENTRY 3-3 2
-ENTRY B1-1FFF 2
+ENTRY E0-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE B1-1FFF 2
+CODE E0-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -52,9 +52,9 @@ SFR3 180-18F 1
 COMMON 75-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE B1-1FFF 2
+STRCODE E0-1FFF 2
 STRING 3-3 2
-STRING B1-1FFF 2
+STRING E0-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -69,77 +69,71 @@ STRING B1-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\lab9.X.production.o
-F cinit CODE >473:C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.s
-F cinit CODE >476:C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.s
-F cinit CODE >482:C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.s
-F cinit CODE >484:C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.s
-10 cinit CODE >485:C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.s
-4 intentry CODE >51:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-95 text2 CODE >51:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-95 text2 CODE >55:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-9B text2 CODE >57:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-A4 text2 CODE >60:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-A6 text2 CODE >61:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-A7 text2 CODE >62:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-A8 text2 CODE >63:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-A8 text2 CODE >66:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-A9 text2 CODE >68:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-AA text2 CODE >71:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-13 text1 CODE >106:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-13 text1 CODE >109:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-17 text1 CODE >110:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-18 text1 CODE >113:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-1C text1 CODE >114:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-1D text1 CODE >115:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-1E text1 CODE >116:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-21 text1 CODE >117:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-22 text1 CODE >120:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-25 text1 CODE >121:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-26 text1 CODE >122:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-27 text1 CODE >123:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-28 text1 CODE >126:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-29 text1 CODE >127:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-2A text1 CODE >128:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-2B text1 CODE >130:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-31 text1 CODE >131:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-33 text1 CODE >132:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-34 text1 CODE >133:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-38 text1 CODE >139:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-3B text1 CODE >140:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-3C text1 CODE >141:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-3E text1 CODE >144:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-42 text1 CODE >145:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-46 text1 CODE >146:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-48 text1 CODE >147:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-4A text1 CODE >150:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-4C text1 CODE >153:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-4E text1 CODE >159:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-4F text1 CODE >160:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-51 text1 CODE >161:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-52 text1 CODE >163:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-56 text1 CODE >164:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-57 text1 CODE >165:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-5A text1 CODE >166:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-5B text1 CODE >168:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-5C text1 CODE >169:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-5D text1 CODE >170:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-5E text1 CODE >171:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-5F text1 CODE >172:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-60 text1 CODE >173:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-61 text1 CODE >176:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-62 text1 CODE >177:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-65 text1 CODE >180:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-66 maintext CODE >77:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-66 maintext CODE >79:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-6B maintext CODE >84:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-71 maintext CODE >86:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-7A maintext CODE >88:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-7E maintext CODE >89:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-83 maintext CODE >90:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-86 maintext CODE >91:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-87 maintext CODE >94:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-89 maintext CODE >95:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
-8E maintext CODE >96:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+F cinit CODE >467:C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.s
+F cinit CODE >470:C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.s
+F cinit CODE >476:C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.s
+F cinit CODE >478:C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.s
+10 cinit CODE >479:C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.s
+4 intentry CODE >47:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+13 text2 CODE >47:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+13 text2 CODE >51:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+19 text2 CODE >54:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+22 text2 CODE >56:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+28 text2 CODE >57:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+32 text2 CODE >58:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+46 text2 CODE >59:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+4A text2 CODE >60:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+4B text2 CODE >64:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+51 text2 CODE >65:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+5B text2 CODE >66:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+6F text2 CODE >67:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+71 text2 CODE >69:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+75 text2 CODE >70:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+78 text2 CODE >71:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+79 text2 CODE >73:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+80 text1 CODE >87:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+80 text1 CODE >90:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+84 text1 CODE >93:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+88 text1 CODE >94:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+89 text1 CODE >95:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+8C text1 CODE >96:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+8D text1 CODE >99:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+90 text1 CODE >100:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+91 text1 CODE >101:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+92 text1 CODE >102:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+93 text1 CODE >105:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+94 text1 CODE >106:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+95 text1 CODE >107:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+96 text1 CODE >108:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+9C text1 CODE >109:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+9E text1 CODE >110:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+9F text1 CODE >111:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+A3 text1 CODE >114:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+A7 text1 CODE >116:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+A8 text1 CODE >117:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+AC text1 CODE >118:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+B0 text1 CODE >119:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+B2 text1 CODE >120:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+B4 text1 CODE >122:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+B7 text1 CODE >123:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+BD text1 CODE >124:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+BF text1 CODE >125:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+C0 text1 CODE >128:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+C1 text1 CODE >129:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+C3 text1 CODE >130:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+C4 text1 CODE >132:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+C8 text1 CODE >133:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+C9 text1 CODE >134:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+CC text1 CODE >135:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+CD text1 CODE >139:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+CE text1 CODE >140:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+CF text1 CODE >142:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+D0 text1 CODE >143:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+D3 text1 CODE >145:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+D4 maintext CODE >77:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+D4 maintext CODE >79:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+D9 maintext CODE >80:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
+DC maintext CODE >82:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -153,41 +147,40 @@ AA text2 CODE >71:C:\Users\Andy Bonilla\Documents\GitHub\Lab9.X\lab9.X\main_lab9
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\lab9.X.production.o
-__Hspace_0 B1 0 ABS 0 - -
+__Hspace_0 E0 0 ABS 0 - -
 __Hspace_1 75 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
-_main CC 0 CODE 0 maintext dist/default/production\lab9.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
+_main 1A8 0 CODE 0 maintext dist/default/production\lab9.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\lab9.X.production.o
-start 18 0 CODE 0 init C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
+start 18 0 CODE 0 init C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
 __size_of_main 0 0 ABS 0 - dist/default/production\lab9.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\lab9.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\lab9.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ADRESH 1E 0 ABS 0 - dist/default/production\lab9.X.production.o
-_ANSELH 189 0 ABS 0 - dist/default/production\lab9.X.production.o
+_ADRESL 9E 0 ABS 0 - dist/default/production\lab9.X.production.o
 _CCPR1L 15 0 ABS 0 - dist/default/production\lab9.X.production.o
 _CCPR2L 1B 0 ABS 0 - dist/default/production\lab9.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
-___stacklo 0 0 ABS 0 - C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
+___stackhi 0 0 ABS 0 - C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
+___stacklo 0 0 ABS 0 - C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\lab9.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\lab9.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\lab9.X.production.o
-_TRISDbits 88 0 ABS 0 - dist/default/production\lab9.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
+___int_sp 0 0 STACK 2 stack C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -203,7 +196,6 @@ __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
 __Lcinit 1E 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
-_PORTDbits 8 0 ABS 0 - dist/default/production\lab9.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\lab9.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -223,17 +215,17 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _PR2 92 0 ABS 0 - dist/default/production\lab9.X.production.o
-__S0 B1 0 ABS 0 - -
+__S0 E0 0 ABS 0 - -
 __S1 75 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 12A 0 CODE 0 text2 dist/default/production\lab9.X.production.o
+_isr 26 0 CODE 0 text2 dist/default/production\lab9.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\lab9.X.production.o
-__end_of_isr 162 0 CODE 0 text2 dist/default/production\lab9.X.production.o
+__end_of_isr 100 0 CODE 0 text2 dist/default/production\lab9.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ANDYBO~1\AppData\Local\Temp\s3io.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ANDYBO~1\AppData\Local\Temp\s2hk.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\lab9.X.production.o
-__pmaintext CC 0 CODE 0 maintext dist/default/production\lab9.X.production.o
+__pmaintext 1A8 0 CODE 0 maintext dist/default/production\lab9.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\lab9.X.production.o
@@ -250,8 +242,8 @@ end_of_initialization 1E 0 CODE 0 cinit dist/default/production\lab9.X.productio
 __Hintentry 18 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
-__ptext1 26 0 CODE 0 text1 dist/default/production\lab9.X.production.o
-__ptext2 12A 0 CODE 0 text2 dist/default/production\lab9.X.production.o
+__ptext1 100 0 CODE 0 text1 dist/default/production\lab9.X.production.o
+__ptext2 26 0 CODE 0 text2 dist/default/production\lab9.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -260,19 +252,18 @@ __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\lab9.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 12A 0 CODE 0 maintext dist/default/production\lab9.X.production.o
+__end_of_main 1C0 0 CODE 0 maintext dist/default/production\lab9.X.production.o
+_CCP2CONbits 1D 0 ABS 0 - dist/default/production\lab9.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\lab9.X.production.o
+_PORTA 5 0 ABS 0 - dist/default/production\lab9.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\lab9.X.production.o
-_PORTD 8 0 ABS 0 - dist/default/production\lab9.X.production.o
 _TRISA 85 0 ABS 0 - dist/default/production\lab9.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\lab9.X.production.o
-_TRISD 88 0 ABS 0 - dist/default/production\lab9.X.production.o
-__end_of_setup CC 0 CODE 0 text1 dist/default/production\lab9.X.production.o
+__end_of_setup 1A8 0 CODE 0 text1 dist/default/production\lab9.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\lab9.X.production.o
-_setup 26 0 CODE 0 text1 dist/default/production\lab9.X.production.o
-_CCP2CON 1D 0 ABS 0 - dist/default/production\lab9.X.production.o
+_setup 100 0 CODE 0 text1 dist/default/production\lab9.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\lab9.X.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\lab9.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\lab9.X.production.o
@@ -304,7 +295,7 @@ _CCP1CONbits 17 0 ABS 0 - dist/default/production\lab9.X.production.o
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cstackCOMMON 1 70 70 5 1
-intentry 0 4 8 AD 2
+intentry 0 4 8 DC 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
